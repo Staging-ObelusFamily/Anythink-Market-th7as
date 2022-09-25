@@ -56,7 +56,7 @@ const LoggedInView = (props) => {
   return null;
 };
 
-function Header {
+function Header() {
   return (
     <nav
       className="navbar navbar-expand-md navbar-dark"
