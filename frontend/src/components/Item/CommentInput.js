@@ -8,7 +8,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 function CommentInput({ currentUser }) {
-  const [body, setBody] = useState(");
+  const [body, setBody] = useState("");
 
   return (
     <form className="card comment-form m-2" onSubmit={}>
