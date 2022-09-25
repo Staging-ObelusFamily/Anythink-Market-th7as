@@ -2,10 +2,6 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { ADD_COMMENT } from "../../constants/actionTypes";
 
-const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (payload) => dispatch({ type: ADD_COMMENT, payload }),
-});
-
 function CommentInput({ currentUser }) {
   const [body, setBody] = useState("");
 
@@ -35,4 +31,4 @@ function CommentInput({ currentUser }) {
   )
 }
 
-export default connect(() => ({}), mapDispatchToProps)(CommentInput);
+export default CommentInput;
