@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { connect } from "react-redux";
-import { ADD_COMMENT } from "../../constants/actionTypes";
+import { useState } from "react";
 
 function CommentInput({ currentUser }) {
   const [body, setBody] = useState("");
