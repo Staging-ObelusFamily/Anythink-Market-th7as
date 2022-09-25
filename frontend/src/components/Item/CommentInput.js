@@ -18,15 +18,14 @@ function CommentInput({ currentUser }) {
         <img
           src={currentUser.image}
           className="user-pic mr-2"
-          alt={
-            currentUser.username}
+          alt={currentUser.username}
         />
         <button className="btn btn-sm btn-primary" type="submit">
           Post Comment
         </button>
       </div>
     </form>
-  )
+  );
 }
 
 export default CommentInput;
