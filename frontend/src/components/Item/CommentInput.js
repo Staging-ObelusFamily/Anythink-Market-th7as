@@ -11,7 +11,7 @@ function CommentInput({ currentUser }) {
   const [body, setBody] = useState("");
 
   return (
-    <form className="card comment-form m-2" onSubmit={}>
+    <form className="card comment-form m-2">
       <div className="card-block">
         <textarea
           className="form-control"
