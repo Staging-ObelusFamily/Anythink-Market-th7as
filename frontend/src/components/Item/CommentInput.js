@@ -1,22 +1,20 @@
 import agent from "../../agent";
-import { useState } from 'react';
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ADD_COMMENT } from "../../constants/actionTypes";
 
 function CommentInput(props) {
   const dispatch = useDispatch();
   const [body, setBody] = useState("");
-    
-  const updateBody = (ev) => setBody(ev.target.value)
 
+  const updateBody = (ev) => setBody(ev.target.value);
 
   const createComment = (ev) => {
     ev.preventDefault();
     const payload = agent.Comments.create(props.slug, { body });
     setBody("");
-    dispatch({ type: ADD_COMMENT, payload })
+    dispatch({ type: ADD_COMMENT, payload });
   };
-
 
   return (
     <form className="card comment-form m-2" onSubmit={createComment}>
