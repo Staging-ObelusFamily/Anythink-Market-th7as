@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ADD_COMMENT } from "../../constants/actionTypes";
 
-function CommentInput(props) {
+function CommentInput({ currentUser, slug }) {
   const dispatch = useDispatch();
   const [body, setBody] = useState("");
 
@@ -11,7 +11,7 @@ function CommentInput(props) {
 
   const createComment = (ev) => {
     ev.preventDefault();
-    const payload = agent.Comments.create(props.slug, { body });
+    const payload = agent.Comments.create(slug, { body });
     setBody("");
     dispatch({ type: ADD_COMMENT, payload });
   };
@@ -29,9 +29,9 @@ function CommentInput(props) {
       </div>
       <div className="card-footer">
         <img
-          src={props.currentUser.image}
+          src={currentUser.image}
           className="user-pic mr-2"
-          alt={props.currentUser.username}
+          alt={currentUser.username}
         />
         <button className="btn btn-sm btn-primary" type="submit">
           Post Comment
