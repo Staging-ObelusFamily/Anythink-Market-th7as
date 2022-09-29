@@ -11,7 +11,7 @@ function CommentInput(props) {
   const createComment = (ev) => {
     ev.preventDefault();
     const payload = agent.Comments.create(props.slug, { body });
-    setState("");
+    setBody("");
     dispatch({ type: ADD_COMMENT, payload })
   };
 
@@ -23,7 +23,7 @@ function CommentInput(props) {
           className="form-control"
           placeholder="Write a comment..."
           value={body}
-          onChange={(e) => setBody}
+          onChange={updateBody}
           rows="3"
         ></textarea>
       </div>
