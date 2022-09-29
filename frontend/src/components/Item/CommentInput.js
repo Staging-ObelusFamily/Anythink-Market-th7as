@@ -1,8 +1,10 @@
 import agent from "../../agent";
 import { useState } from 'react';
+import { useDispatch } from "react-redux";
 import { ADD_COMMENT } from "../../constants/actionTypes";
 
 function CommentInput(props) {
+  const dispatch = useDispatch();
   const [body, setBody] = useState("");
     
   const updateBody = (ev) => setBody(ev.target.value)
